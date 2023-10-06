@@ -1,0 +1,95 @@
+body {
+    background-color: #39A99D;
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+}
+
+.container {
+    border-radius: 8px;
+    padding: 20px;
+    color: #39A99D;
+}
+
+h2 {
+    color: #39A99D;
+    border-bottom: 2px solid #F4DF87;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.button-default {
+    background-color: #39A99D;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button-default:hover {
+    background-color: #F4DF87 !important;
+    color: #39A99D !important;
+}
+
+a {
+    color: #F4DF87;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #39A99D;
+}
+
+
+
+header {
+    border-bottom: 2px solid #39A99D;
+}
+
+.navbar-brand {
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #F4DF87;
+    border: none !important;
+}
+
+.navbar-expand-lg .navbar-collapse {
+
+    justify-content: flex-end;
+}
+
+.navbar-toggler {
+border: none !important;
+}
+
+.navbar-toggler:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.nav-link {
+    margin-right: 15px;
+    text-align: end;
+    font-size: 15px;
+    font-weight: normal;
+    color: #000000;
+    line-height: normal;
+}
+
+.nav-link:hover {
+    color: #39A99D !important;
+}
+
+.nav-link.active {
+    color: #39A99D !important;
+}
+
+#emailList {
+    max-height: 150px;
+    overflow-y: auto;
+}

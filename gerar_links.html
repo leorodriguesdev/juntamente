@@ -1,0 +1,72 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Login Admin - JuntaMente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="logo.png" alt="" width="200" ></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">CADASTRO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="relatorio.html">RELATORIO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!-- gerar_links.html -->
+<!-- Estrutura do cabeçalho similar ao anterior -->
+<div class="container mt-5">
+    <div class="row d-flex justify-content-center">
+    <div class="col-md-8 col-mb-12 col-sm-12">
+        <h2>Gerar Links</h2>
+        <!-- Em uma aplicação real, esta seria uma lista dropdown das equipes cadastradas -->
+        <select class="form-control mb-3" id="selectEquipe">
+            <option>Equipe 1</option>
+            <option>Equipe 2</option>
+        </select>
+        <button class="button-default" onclick="gerarLink()">Gerar Link</button>
+        <div id="linkGerado" class="mt-3"></div>
+    </div>
+
+</div>
+</div>
+<script>
+function gerarLink() {
+    // Em uma aplicação real, você teria uma lógica mais robusta para gerar links únicos, um botoão para copiar e outro botao para enviar email.
+    let link = "http://juntamente.com/formulario/" + Math.random().toString(36).substr(2, 9);
+    document.getElementById("linkGerado").innerText = link  + "?equipe=" + document.getElementById("selectEquipe").value;
+    console.log(link);
+    navigator.clipboard.writeText(link);
+    setTimeout(function() {
+        alert("Link copiado! Clique aqui para enviar e-mail.");
+        window.location.href = "email.html";
+    }, 1000);
+
+    
+}
+</script>
+<!-- Estrutura do rodapé similar ao anterior -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
